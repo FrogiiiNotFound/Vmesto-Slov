@@ -4,7 +4,7 @@ import trashBin from "@shared/assets/images/bin.svg";
 import { Menu } from "@widgets/menu";
 import { useEffect, useState } from "react";
 import { useAddAddress } from "../../../entities/user/model/useAddAddress";
-import "./Settings.scss";
+import "./settings.scss";
 import { useUser } from "@/entities/user";
 import { YandexMapPicker } from "./YandexMapPicker";
 import { useGetUser } from "@/entities/user/model/useGetUser";
