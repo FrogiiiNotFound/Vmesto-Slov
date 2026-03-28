@@ -18,4 +18,5 @@ export default defineConfig({
     },
     extensions: ['', '.ts', '.tsx', '.js'],
   },
+  base: process.env.VITE_BASE_PATH || "/Vmesto-Slov"
 });
