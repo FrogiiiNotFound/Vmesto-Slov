@@ -1,4 +1,4 @@
-import type { CartItem } from "@/entities/card";
+import type { CartItem } from "@/entities/cart";
 import { create } from "zustand";
 
 type FavouritesState = {
