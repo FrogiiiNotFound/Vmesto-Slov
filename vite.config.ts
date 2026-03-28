@@ -16,7 +16,7 @@ export default defineConfig({
       '@entities': path.resolve(__dirname, './src/entities'),
       '@shared': path.resolve(__dirname, './src/shared'),
     },
-    extensions: ['', '.ts', '.tsx', '.js'],
+    extensions: ['.ts', '.tsx', '.js'],
   },
   base: process.env.VITE_BASE_PATH || "/Vmesto-Slov"
 });

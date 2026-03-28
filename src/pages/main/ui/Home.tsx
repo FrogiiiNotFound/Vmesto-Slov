@@ -1,5 +1,5 @@
 import search from "@shared/assets/images/search.svg";
-import "./Home.scss";
+import "./home.scss";
 import "./Products.scss";
 
 import { LoginForm } from "@/widgets/login/ui/LoginForm";
@@ -29,12 +29,17 @@ export const Home = () => {
                 <div className="home__container _container">
                     <ul className="home__search-list">
                         {searchItems.map((item) => (
-                            <Link key={item.tags} to={`/search?tags=${encodeURIComponent(item.tags)}`}>
+                            <Link
+                                key={item.tags}
+                                to={`/search?tags=${encodeURIComponent(item.tags)}`}
+                            >
                                 <li className="home__search-item">
                                     <div className="home__search-img">
                                         <img src={search} alt="search" />
                                     </div>
-                                    <p className="home__search-text">{item.label}</p>
+                                    <p className="home__search-text">
+                                        {item.label}
+                                    </p>
                                 </li>
                             </Link>
                         ))}

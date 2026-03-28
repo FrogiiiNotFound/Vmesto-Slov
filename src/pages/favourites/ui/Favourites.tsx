@@ -1,6 +1,6 @@
 import { SmallCard } from "@/entities/product";
 import type { Product } from "@/shared/types";
-import "./Favourites.scss";
+import "./favourites.scss";
 import { Menu } from "@widgets/menu";
 import { useGetFavourites } from "@/entities/user/model/useGetFavourites";
 import { useMemo } from "react";

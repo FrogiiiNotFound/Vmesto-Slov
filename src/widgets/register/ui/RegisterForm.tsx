@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import type { RegisterFormValue } from "../model/types";
 import { useRegister } from "../model/useRegisterStore";
-import "./registerForm.scss";
+import "./RegisterForm.scss";
 import { useState } from "react";
 
 export const RegisterForm = () => {
