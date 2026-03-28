@@ -1,0 +1,18 @@
+.favourites {
+  &__cards {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
+
+/* ============================================================================== */
+
+@media (max-width: 1250px) {
+  .favourites {
+    &__cards {
+      justify-content: center;
+    }
+  }
+}

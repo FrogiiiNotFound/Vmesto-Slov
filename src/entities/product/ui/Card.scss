@@ -1,0 +1,282 @@
+.card {
+    min-height: 609px;
+
+    &__img {
+        margin-bottom: 20px;
+    }
+
+    &__img img {
+        width: 320px;
+        height: 320px;
+    }
+
+    &__slide-title {
+        font-weight: 500;
+        font-size: 21px;
+        color: #000;
+        margin-bottom: 7px;
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 13px;
+    }
+
+    &__star {
+        display: flex;
+        align-items: center;
+    }
+
+    &__price-container {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+    }
+
+    &__value {
+        font-weight: 400;
+        font-size: 20px;
+        color: #010101;
+    }
+
+    &__number {
+        font-weight: 400;
+        font-size: 16px;
+        color: #4b4b4b;
+    }
+
+    &__desc {
+        max-width: 320px;
+        font-weight: 400;
+        font-size: 16px;
+        color: #000;
+    }
+
+    &__pricing {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 17px;
+    }
+
+    &__price {
+        display: flex;
+        gap: 5px;
+    }
+
+    &__new-price {
+        font-weight: 500;
+        font-size: 26px;
+        color: #010101;
+    }
+
+    &__old-price {
+        font-weight: 400;
+        font-size: 18px;
+        color: #a3a3a3;
+        text-decoration: line-through;
+    }
+
+    &__btn {
+        cursor: pointer;
+        border: 2px solid #bebebe;
+        border-radius: 10px;
+        background: #fff;
+        padding: 12px 30px;
+        text-align: center;
+        color: #010101;
+        transition: 0.2s all ease-in-out;
+
+        &:hover {
+            border: 2px solid #ff9e7b;
+            color: white;
+            background-color: #ff9e7b;
+        }
+
+        &:active {
+            background: #ff5517;
+        }
+    }
+
+    &__btn-text {
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    &__prev {
+        cursor: pointer;
+        z-index: 100;
+
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        rotate: -180deg;
+
+        border-radius: 10px;
+        backdrop-filter: blur(5px);
+        padding: 10px;
+    }
+
+    &__next {
+        cursor: pointer;
+        z-index: 100;
+
+        position: absolute;
+        top: 50%;
+        right: 10px;
+
+        border-radius: 10px;
+        backdrop-filter: blur(5px);
+        padding: 10px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        min-height: 262px;
+    }
+
+    &__info {
+        margin-bottom: 30px;
+    }
+
+    &__amount {
+        border-radius: 5px;
+        background: #f3f3f3;
+        padding: 10px 12px;
+
+        display: flex;
+        align-items: center;
+        gap: 13px;
+    }
+
+    &__amount-decrease {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 10px 5px;
+    }
+
+    &__amount-value {
+        font-weight: 400;
+        font-size: 18px;
+        color: #363636;
+    }
+
+    &__amount-increase {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 10px 5px;
+    }
+
+    &__like {
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    &__like img {
+        width: 30px;
+    }
+}
+
+/* ============================================================================== */
+
+@media (max-width: 1250px) {
+    .card {
+        &__img img {
+            width: inherit;
+            height: inherit;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        &__pricing {
+            flex-direction: column;
+        }
+
+        &__slider-title {
+            font-size: 18px;
+        }
+
+        &__desc {
+            height: 63px;
+            font-size: 14px;
+        }
+
+        &__btn {
+            width: 100%;
+        }
+
+        &__new-price {
+            font-size: 24px;
+        }
+
+        &__old-price {
+            font-size: 16px;
+        }
+
+        &__value {
+            font-size: 17px;
+        }
+
+        &__number {
+            font-size: 14px;
+        }
+
+        &__slide-title {
+            height: 63px;
+        }
+    }
+}
+
+@media (max-width: 528px) {
+    .card {
+        min-height: fit-content;
+
+        &__slide-title {
+            height: 45px;
+            font-size: 15px;
+        }
+
+        &__new-price {
+            font-size: 18px;
+        }
+
+        &__old-price {
+            font-size: 12px;
+        }
+
+        &__btn {
+            padding: 8px 30px;
+        }
+
+        &__amount {
+            padding: 5px 6px;
+        }
+
+        &__amount-value {
+            font-size: 15px;
+        }
+
+        &__amount-increase img {
+            width: 12px;
+        }
+
+        &__amount-decrease img {
+            width: 12px;
+        }
+
+        &__like img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

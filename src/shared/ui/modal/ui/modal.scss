@@ -1,0 +1,27 @@
+.layout {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    opacity: 1;
+}
+
+.modal {
+    background-color: white;
+    border-radius: 30px;
+
+    min-width: 533px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ============================================================================== */
+
+@media (max-width: 528px) {
+    .modal {
+        min-width: 100%;
+    }
+}

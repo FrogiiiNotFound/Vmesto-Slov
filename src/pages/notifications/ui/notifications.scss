@@ -1,0 +1,49 @@
+.notifications {
+    &__notification {
+        margin-bottom: 30px;
+    }
+
+    &__notification-title {
+        font-style: italic;
+        font-weight: 400;
+        font-size: 18px;
+        color: #000;
+        margin-bottom: 17px;
+    }
+
+    &__inputs {
+        display: flex;
+        align-items: center;
+        gap: 52px;
+        margin-bottom: 10px;
+    }
+
+    &__btn {
+        cursor: pointer;
+        background: #ff9e7b;
+        padding: 12px 65px;
+        text-align: center;
+
+        font-weight: 600;
+        font-size: 15px;
+        color: #fff;
+
+        &:hover {
+            background: #ff8052;
+        }
+
+        &:active {
+            background: #ff5517;
+        }
+    }
+}
+
+/* ============================================================================== */
+
+@media (max-width: 1250px) {
+  .notifications {
+    &__content {
+      gap: 20px !important;
+    }
+  }
+}

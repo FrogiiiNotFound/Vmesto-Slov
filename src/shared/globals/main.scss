@@ -1,0 +1,29 @@
+//fonts
+@import url(https://fonts.googleapis.com/css?family=Inter:regular,500,700);
+@import url(https://fonts.googleapis.com/css?family=Inria+Sans:300,300italic,regular,italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:regular,italic,500,500italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Pacifico:regular);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "tailwindcss";
+@import "./vars";
+@import "./helpers";
+@import "./reset";
+@import "./repeat";
+
+[data-sonner-toast][data-styled="true"] {
+    justify-content: center;
+    width: fit-content !important;
+    white-space: nowrap;
+    left: 50% !important;
+    transform: var(--y) translateX(-50%) !important;
+
+    [data-content] {
+        text-align: center;
+        font-size: 14px;
+        align-items: center;
+    }
+}

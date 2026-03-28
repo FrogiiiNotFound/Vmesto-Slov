@@ -1,0 +1,228 @@
+.filters {
+    min-width: 254px;
+
+    &__filter {
+        margin-bottom: 46px;
+    }
+
+    &__filter-title {
+        font-weight: 500;
+        font-size: 18px;
+        color: #000;
+        margin-bottom: 16px;
+    }
+
+    &__filter-buttons {
+        max-width: 254px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    &__filter-button {
+        cursor: pointer;
+        min-width: 120px;
+        border-radius: 10px;
+        background: #e2e2e2;
+        padding: 10px 0px;
+        color: #000;
+        text-align: center;
+
+        &:hover {
+            background: #ffab8c;
+            color: #fff;
+        }
+
+        &.active {
+            background: #ff9e7b;
+            color: #fff;
+        }
+    }
+
+    &__fliter-button-text {
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    &__filter-subtitle {
+        font-style: italic;
+        font-weight: 400;
+        font-size: 18px;
+        color: #5b5b5b;
+        margin-bottom: 5px;
+    }
+
+    &__filter-inputs {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    &__filter-input {
+        max-width: 120px;
+        font-weight: 400;
+        font-size: 15px;
+        color: black;
+        padding: 10px 8px;
+        background-color: #e2e2e2;
+        border-radius: 10px;
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: 15px;
+            color: #5b5b5b;
+        }
+    }
+
+    &__addition-filters {
+        max-width: 251px;
+    }
+
+    &__addition-filter-header {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &__addition-filter-title {
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    &__addition-filter-icon {
+        display: flex;
+        align-items: center;
+    }
+
+    &__body-btn {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        margin-bottom: 12px;
+    }
+
+    &__body-checkmark {
+        cursor: pointer;
+        border: 1px solid #000;
+        border-radius: 3px;
+        padding: 6px 4px;
+        min-width: 23px;
+        min-height: 22px;
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__body-btn-text {
+        font-style: italic;
+        font-weight: 400;
+        font-size: 16px;
+        color: #5b5b5b;
+    }
+
+    &__cards {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    &__input-wrapper {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        font-size: 16px;
+        user-select: none;
+    }
+
+    &__input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked ~ .search__checkmark {
+            background-color: #ff9e7b;
+            border-color: #ff9e7b;
+        }
+
+        &:checked ~ .search__checkmark:after {
+            display: flex;
+        }
+    }
+
+    &__checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+
+        &:after {
+            content: "";
+            display: none;
+            margin-left: 6.5px;
+            margin-top: 2px;
+            align-items: center;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+        }
+    }
+
+    &__input-wrapper:hover &__checkmark {
+        border-color: #ff9e7b;
+    }
+
+    &__addition-filter-body {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+
+    &__addition-filter-body.active {
+        max-height: 500px;
+        opacity: 1;
+        margin-bottom: 20px;
+    }
+
+    &__addition-filter-icon {
+        transition: transform 0.3s ease;
+    }
+
+    &__addition-filter-icon.active {
+        transform: rotate(180deg);
+    }
+
+    &__close {
+        display: none;
+        position: sticky;
+        top: 0;
+        float: right;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #363636;
+        margin-bottom: 16px;
+
+        @media (max-width: 758px) {
+            display: block;
+        }
+    }
+}

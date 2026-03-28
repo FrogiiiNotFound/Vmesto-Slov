@@ -1,0 +1,25 @@
+.title {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 30px;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.main-content {
+    display: flex;
+    gap: 90px;
+    margin-bottom: 42px;
+}
+
+@media (max-width: 530px) {
+    .main-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+}
