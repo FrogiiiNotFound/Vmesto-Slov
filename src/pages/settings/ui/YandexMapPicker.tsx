@@ -15,7 +15,8 @@ const loadYmaps = (): Promise<any> => {
             return;
         }
         const script = document.createElement("script");
-        script.src = `https://api-maps.yandex.ru/2.1/?apikey=${YANDEX_API_KEY}&lang=ru_RU`;
+        script.src = `https://api-maps.yandex.ru/2.1/?apikey=${YANDEX_API_KEY}&lang=ru_RU&mode=release&suggest_tags=false&ns=ymaps`;
+        script.async = true;
         script.onload = () => {
             (window as any).ymaps.ready(() => resolve((window as any).ymaps));
         };
